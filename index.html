@@ -5,107 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rahul Kumar - Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
-      background: #f4f4f9;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9f9f9;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
-      background: #4a90e2;
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     header h1 {
+      margin: 0;
       font-size: 2.5rem;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 10px;
+      margin-top: .5rem;
     }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
+    .about {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .slide-track {
+      display: flex;
+      width: calc(250px * 8);
+      animation: scroll 20s linear infinite;
+    }
+
+    .slide {
+      width: 250px;
+      height: 150px;
+      flex-shrink: 0;
+      margin: 0 10px;
       border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    section h2 {
-      margin-bottom: 20px;
-      color: #4a90e2;
-      font-size: 1.8rem;
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    ul {
-      list-style-type: none;
-    }
-
-    ul li {
-      margin: 10px 0;
-      padding: 10px;
-      background: #f0f8ff;
-      border-left: 4px solid #4a90e2;
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-250px * 4)); }
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
+      background: #0077b6;
       color: white;
-      margin-top: 40px;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Rahul Kumar</h1>
     <p>Software Developer | Web Developer | Graphic Designer</p>
-    <p>Canada/ INDIA</p>
   </header>
 
-  <section>
+  <section class="about">
     <h2>About Me</h2>
-    <p>
-      Hello! I am Rahul Kumar, a passionate Software Developer, Web Developer, and Graphic Designer. 
-      I enjoy building creative digital solutions, coding modern web applications, and designing 
-      user-friendly interfaces.
+    <p><strong>Location:</strong> India<br>
+       <strong>Education:</strong> MCA<br><br>
+       I am a passionate software and web developer with experience in creating
+       modern, responsive websites and applications. I also have a strong background
+       in graphic design, ensuring visually appealing and user-friendly projects.
     </p>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>MCA (Master of Computer Applications)</li>
-      <li>BCA (bachelor of Computer Applications)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Web Development (HTML, CSS, JavaScript, PHP, ReactJS)</li>
-      <li>Software Development</li>
-      <li>Graphic Design (Adobe Photoshop, Illustrator)</li>
-    </ul>
+  <section class="slideshow-container">
+    <div class="slide-track">
+      <div class="slide"><img src="https://picsum.photos/250/150?random=1" alt="Project 1"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=2" alt="Project 2"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=3" alt="Project 3"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=4" alt="Project 4"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=5" alt="Project 5"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=6" alt="Project 6"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=7" alt="Project 7"></div>
+      <div class="slide"><img src="https://picsum.photos/250/150?random=8" alt="Project 8"></div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Rahul Kumar</p>
+    <p>&copy; 2025 Rahul Kumar | Portfolio</p>
   </footer>
+
 </body>
 </html>
-
-
